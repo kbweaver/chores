@@ -1,9 +1,10 @@
 import React from 'react';
 
-class HelloWorld extends React.Component {
-    render() {
-        return <h1>Hello from {this.props.phrase}!</h1>;
-    }
-}
+const HelloWorld = ({ phrase }) =>
+  <h1>Hello from {phrase}!</h1>
+
+HelloWorld.propTypes = {
+  phrase: React.PropTypes.string.isRequired
+};
 
 export default HelloWorld;
