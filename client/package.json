@@ -2,6 +2,7 @@
   "name": "chores",
   "version": "0.1.0",
   "description": "Front-end for Chores app",
+  "repository": "jochakovsky/chores",
   "main": "index.js",
   "scripts": {
     "test:lint": "eslint \"src/**/*.@(js|jsx)\"",
