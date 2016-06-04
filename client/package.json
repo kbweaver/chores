@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rm -r build && mkdir -p build",
-    "build": "browserify -t [ babelify ] src/index.jsx -o build/bundle.js"
+    "precompile": "rm -rf build && mkdir -p build",
+    "compile": "browserify -t [ babelify ] src/index.jsx -o build/bundle.js",
+    "prestart": "npm run compile",
+    "start": "http-server build -p 8080 -a 0.0.0.0"
   },
   "author": "Joshua Ochakovsky",
   "license": "GPL-3.0",
@@ -15,6 +17,7 @@
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
+    "http-server": "^0.9.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   }
