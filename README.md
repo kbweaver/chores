@@ -18,4 +18,5 @@ docker-compose up
 
 ```
 docker-compose run client npm test
+docker-compose run server rake test
 ```
