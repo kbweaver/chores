@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChoreList = ({ chores }) =>
+const ChoreList = ({ chores }) => {
   <ul>
   {chores.map((chore, index) => {
     return (
@@ -8,5 +8,10 @@ const ChoreList = ({ chores }) =>
     );
   })}
   </ul>
+};
+
+ChoreList.prototype.propTypes = {
+  chores: React.PropTypes.array.isRequired,
+}
 
 export default ChoreList;

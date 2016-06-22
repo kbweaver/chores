@@ -23,7 +23,7 @@ const chores = (state = sampleChores, action) => {
     case 'ADD_CHORE':
       return [
         ...state,
-        chore(undefined, action)
+        chore(undefined, action),
       ];
     default:
       return state;

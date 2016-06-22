@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import chores from './chores';
 
 const choresApp = combineReducers({
-  chores
+  chores,
 });
 
 export default choresApp;
