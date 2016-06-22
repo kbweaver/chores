@@ -10,7 +10,7 @@
     "precompile": "rm -rf build && mkdir -p build",
     "compile": "npm run compile:js & npm run compile:html",
     "compile:html": "cp src/index.html build/index.html",
-    "compile:js": "browserify -t [ babelify ] src/index.jsx -o build/bundle.js",
+    "compile:js": "browserify -d -t [ babelify ] src/index.jsx -o build/bundle.js",
     "prestart": "npm run compile",
     "start": "http-server build -p 8080 -a 0.0.0.0"
   },
