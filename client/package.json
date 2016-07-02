@@ -8,11 +8,10 @@
     "test:lint": "eslint \"src/**/*.@(js|jsx)\"",
     "test": "npm run test:lint",
     "precompile": "mkdir -p build && rm -rf build/*",
-    "compile": "npm run compile:js & npm run compile:html",
+    "compile": "npm run compile:js && npm run compile:html",
     "compile:html": "cp src/index.html build/index.html",
     "compile:js": "browserify -d -t [ babelify ] src/index.jsx -o build/bundle.js",
-    "prestart": "npm run compile",
-    "start": "http-server build -p 8080 -a 0.0.0.0"
+    "start": "npm run compile"
   },
   "author": "Joshua Ochakovsky",
   "license": "GPL-3.0",
@@ -21,7 +20,6 @@
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
-    "http-server": "^0.9.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
