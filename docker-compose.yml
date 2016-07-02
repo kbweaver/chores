@@ -6,6 +6,8 @@ services:
     ports:
       - '8080:8080'
     build: client/
+    volumes:
+      - static_assets:/usr/src/app/build
     command: npm start
 
   db:
@@ -20,3 +22,18 @@ services:
     links:
       - db
     command: mix phoenix.server
+
+  nginx:
+    ports:
+      - '3000:80'
+    build: nginx/
+    volumes:
+      - static_assets:/usr/share/nginx/static_assets
+    links:
+      - server
+    depends_on:
+      - server
+      - client
+
+volumes:
+  static_assets:

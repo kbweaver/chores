@@ -7,7 +7,7 @@
   "scripts": {
     "test:lint": "eslint \"src/**/*.@(js|jsx)\"",
     "test": "npm run test:lint",
-    "precompile": "rm -rf build && mkdir -p build",
+    "precompile": "mkdir -p build && rm -rf build/*",
     "compile": "npm run compile:js & npm run compile:html",
     "compile:html": "cp src/index.html build/index.html",
     "compile:js": "browserify -d -t [ babelify ] src/index.jsx -o build/bundle.js",
