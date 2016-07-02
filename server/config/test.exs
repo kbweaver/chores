@@ -15,5 +15,5 @@ config :chores, Chores.Repo,
   username: "postgres",
   password: "postgres",
   database: "chores_test",
-  hostname: "localhost",
+  hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox

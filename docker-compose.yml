@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+
+  client:
+    ports:
+      - '8080:8080'
+    build: client/
+    command: npm start
+
+  db:
+    image: postgres
+
+  server:
+    ports:
+      - '4000:4000'
+    build: server/
+    depends_on:
+      - db
+    links:
+      - db
+    command: mix phoenix.server

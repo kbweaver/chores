@@ -38,5 +38,5 @@ config :chores, Chores.Repo,
   username: "postgres",
   password: "postgres",
   database: "chores_dev",
-  hostname: "localhost",
+  hostname: "db",
   pool_size: 10
