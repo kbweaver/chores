@@ -6,6 +6,7 @@ services:
     build: client/
     volumes:
       - static_assets:/usr/src/app/build
+      - ./client:/usr/src/app
     command: npm start
 
   db:

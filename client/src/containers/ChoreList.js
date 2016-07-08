@@ -3,7 +3,7 @@ import ChoreListComponent from '../components/ChoreListComponent.jsx';
 
 const mapStateToProps = (state) => {
   return {
-    chores: state.chores,
+    chores: state.chores.items,
   };
 };
 
