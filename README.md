@@ -1,4 +1,4 @@
-# Chores
+# Chores [![Build Status](https://travis-ci.org/jochakovsky/chores.svg?branch=master)](https://travis-ci.org/jochakovsky/chores)
 
 ## Prerequisites
 
