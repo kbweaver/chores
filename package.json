@@ -5,7 +5,7 @@
   "repository": "jochakovsky/chores",
   "main": "index.js",
   "scripts": {
-    "test:lint": "eslint \"src/**/*.@(js|jsx)\"",
+    "test:lint": "eslint \"web/static/app/**/*.@(js|jsx)\"",
     "test": "npm run test:lint"
   },
   "author": "Joshua Ochakovsky",

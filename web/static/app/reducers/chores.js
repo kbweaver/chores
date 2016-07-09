@@ -16,7 +16,7 @@ const chores = (state = { items: [] }, action) => {
         items: [
           ...state.items,
           chore(undefined, action),
-        ]
+        ],
       });
     case 'RECEIVE_CHORES':
       return Object.assign({}, state, {
