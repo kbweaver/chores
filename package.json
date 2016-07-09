@@ -6,12 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test:lint": "eslint \"src/**/*.@(js|jsx)\"",
-    "test": "npm run test:lint",
-    "precompile": "mkdir -p build && rm -rf build/*",
-    "compile": "npm run compile:js && npm run compile:html",
-    "compile:html": "cp src/index.html build/index.html",
-    "compile:js": "browserify -d -t [ babelify ] src/index.jsx -o build/bundle.js",
-    "start": "npm run compile"
+    "test": "npm run test:lint"
   },
   "author": "Joshua Ochakovsky",
   "license": "GPL-3.0",
