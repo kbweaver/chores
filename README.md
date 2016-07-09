@@ -1,3 +1,17 @@
 # Chores
 
-One day, this might be an online chore chart to use with your roommates, family, etc.
+## Prerequisites
+
+  * Node
+  * Erlang
+  * Elixir
+  * Postgres
+
+## Setup
+
+  * Install client-side dependencies with `npm install`
+  * Install Phoenix dependencies with `mix deps.get`
+  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
+  * Start Phoenix endpoint with `mix phoenix.server`
+
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.

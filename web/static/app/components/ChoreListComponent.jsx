@@ -9,7 +9,8 @@ const ChoreListComponent = ({ chores }) =>
   })}
   </ul>
 
-ChoreListComponent.prototype.propTypes = {
+console.log(ChoreListComponent);
+ChoreListComponent.propTypes = {
   chores: React.PropTypes.array.isRequired,
 }
 

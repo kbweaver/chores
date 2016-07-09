@@ -14,3 +14,9 @@ erl_crash.dump
 # secrets file as long as you replace its contents by environment
 # variables.
 /config/prod.secret.exs
+
+# Since we are building JS with webpack, we should ignore the build output
+/priv/static/js
+
+# NPM
+/node_modules
