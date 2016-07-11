@@ -1,10 +1,3 @@
-export function addChore(name) {
-  return {
-    type: 'ADD_CHORE',
-    name,
-  };
-}
-
 function requestChores() {
   return {
     type: 'REQUEST_CHORES',
@@ -26,4 +19,16 @@ export function fetchChores() {
       .then(response => response.json())
       .then(json => dispatch(receiveChores(json)));
   };
+}
+
+export function addChore(name, date) {
+  return dispatch => {
+    return fetch('/api/chores', {
+      method: 'POST',
+      body: JSON.stringify({ chore: { name: name, date: date.toISOString() } }),
+      headers: new Headers({ "Content-Type": "application/json" })
+    })
+      // TODO: optimistic updates?
+      .then(() => dispatch(fetchChores()));
+  }
 }

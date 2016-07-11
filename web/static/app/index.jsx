@@ -6,7 +6,7 @@ import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 
 import choreListApp from './reducers';
-import ChoreList from './containers/ChoreList';
+import App from './components/App';
 
 const loggerMiddleware = createLogger();
 
@@ -24,7 +24,7 @@ store.dispatch(fetchChores());
 
 ReactDOM.render(
   <Provider store={store}>
-    <ChoreList />
+    <App />
   </Provider>,
   document.querySelector('#root')
 );

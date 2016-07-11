@@ -1,23 +1,5 @@
-const chore = (state, action) => {
-  switch (action.type) {
-    case 'ADD_CHORE':
-      return {
-        name: action.name,
-      };
-    default:
-      return state
-  }
-};
-
 const chores = (state = { items: [] }, action) => {
   switch (action.type) {
-    case 'ADD_CHORE':
-      return Object.assign({}, state, {
-        items: [
-          ...state.items,
-          chore(undefined, action),
-        ],
-      });
     case 'RECEIVE_CHORES':
       return Object.assign({}, state, {
         items: action.chores,
