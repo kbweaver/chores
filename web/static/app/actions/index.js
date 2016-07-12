@@ -26,7 +26,7 @@ export function addChore(name, date) {
     return fetch('/api/chores', {
       method: 'POST',
       body: JSON.stringify({ chore: { name: name, date: date.toISOString() } }),
-      headers: new Headers({ "Content-Type": "application/json" })
+      headers: new Headers({ "Content-Type": "application/json" }),
     })
       // TODO: optimistic updates?
       .then(() => dispatch(fetchChores()));

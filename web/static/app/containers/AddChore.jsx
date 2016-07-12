@@ -29,6 +29,9 @@ let AddChore = ({ dispatch }) => {
     </div>
   )
 }
+AddChore.propTypes = {
+  dispatch: React.PropTypes.func.isRequired,
+};
 AddChore = connect()(AddChore);
 
 export default AddChore;
