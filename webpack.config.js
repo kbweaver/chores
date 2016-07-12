@@ -11,8 +11,5 @@ module.exports = {
   output: {
     path: "./priv/static/js",
     filename: "app.js",
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-  },
+  }
 };

@@ -8,8 +8,6 @@ parserOptions:
   sourceType: module
   ecmaFeatures:
     jsx: true
-env:
-  browser: true
 rules:
   comma-dangle:
     - error

@@ -5,8 +5,10 @@
   "repository": "jochakovsky/chores",
   "main": "index.js",
   "scripts": {
-    "test:lint": "eslint \"web/static/app/**/*.@(js|jsx)\"",
-    "test": "npm run test:lint"
+    "test:lint": "eslint --env browser \"web/static/app/**/!(*.test).js\"",
+    "test:lintunit": "eslint --env mocha \"web/static/app/**/*.test.js\"",
+    "test:unit": "mocha --compilers js:babel-core/register web/static/app/**/*.test.js",
+    "test": "npm run test:unit && npm run test:lint && npm run test:lintunit"
   },
   "author": "Joshua Ochakovsky",
   "license": "GPL-3.0",
@@ -24,7 +26,12 @@
     "webpack": "^1.13.1"
   },
   "devDependencies": {
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
     "eslint": "^2.11.1",
-    "eslint-plugin-react": "^5.1.1"
+    "eslint-plugin-react": "^5.1.1",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.2.1"
   }
 }
