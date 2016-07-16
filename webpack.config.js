@@ -1,9 +1,9 @@
 module.exports = {
   devtool: 'source-map',
-  entry: "./web/static/app/index.jsx",
+  entry: "./web/static/app/index.js",
   module: {
     loaders: [{
-      test: /\.jsx?$/,
+      test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
     }],
