@@ -12,6 +12,7 @@ config :chores,
 # Configures the endpoint
 config :chores, Chores.Endpoint,
   url: [host: "localhost"],
+  # TODO: read from environment variable
   secret_key_base: "7tN6e+DnMDPyCNWxundmGHP4mZXbhf4zKXPPKwXR105wexbDk6hjnEPwF2nu86mB",
   render_errors: [view: Chores.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Chores.PubSub,
@@ -21,6 +22,15 @@ config :chores, Chores.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+
+config :ueberauth, Ueberauth,
+  providers: [
+    google: {Ueberauth.Strategy.Google, [default_scope: "profile"]}
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Google.OAuth,
+  client_id: System.get_env("GOOGLE_CLIENT_ID"),
+  client_secret: System.get_env("GOOGLE_CLIENT_SECRET")
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

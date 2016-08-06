@@ -25,4 +25,11 @@ defmodule Chores.Router do
 
     resources "/chores", ChoreController, except: [:new, :edit]
   end
+
+  scope "/auth", Chores do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
 end
