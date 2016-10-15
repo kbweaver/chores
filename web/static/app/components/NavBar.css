@@ -1,0 +1,17 @@
+.icon {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.login {
+  float: right;
+}
+
+.navbar {
+  background-color: thistle;
+}
+
+.navbar:after {
+  content: "";
+  clear: both;
+}
