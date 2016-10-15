@@ -13,27 +13,27 @@
   "author": "Joshua Ochakovsky",
   "license": "GPL-3.0",
   "dependencies": {
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
-    "babel-preset-react": "^6.11.1",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2",
-    "redux-logger": "^2.6.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.0",
     "redux-thunk": "^2.1.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.2"
   },
   "devDependencies": {
-    "babel-register": "^6.9.0",
+    "babel-register": "^6.16.3",
     "chai": "^3.5.0",
     "enzyme": "^2.4.1",
-    "eslint": "^2.11.1",
-    "eslint-plugin-react": "^5.1.1",
-    "mocha": "^2.5.3",
-    "react-addons-test-utils": "^15.2.1"
+    "eslint": "^3.8.0",
+    "eslint-plugin-react": "^6.4.1",
+    "mocha": "^3.1.2",
+    "react-addons-test-utils": "^15.3.2"
   }
 }
