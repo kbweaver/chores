@@ -2,9 +2,9 @@ import React from 'react';
 
 const ChoreListComponent = ({ chores }) =>
   <ul>
-  {chores.map((chore, index) => {
+  {chores.map(chore => {
     return (
-      <li key={index}>{chore.name} ({index})</li>
+      <li key={chore.id}>{chore.name} ({chore.id})</li>
     );
   })}
   </ul>
