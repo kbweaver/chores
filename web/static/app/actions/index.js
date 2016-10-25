@@ -37,6 +37,31 @@ export function addChore(name, date) {
       headers: new Headers({ "Content-Type": "application/json" }),
     })
       .then(response => response.json())
-      .then(json => dispatch(receiveNewChore(json)));
+      .then(json => dispatch(receiveNewChore(json))); // TODO: error handling
+  }
+}
+
+function requestChoreDeletion(id) {
+  return {
+    type: 'REQUEST_CHORE_DELETION',
+    id,
+  };
+}
+
+function deleteChoreSuccess(id) {
+  return {
+    type: 'DELETE_CHORE',
+    id,
+  };
+}
+
+export function deleteChore(id) {
+  return dispatch => {
+    dispatch(requestChoreDeletion(id));
+    return fetch(`/api/chores/${id}`, {
+      method: 'DELETE',
+      headers: new Headers({ "Content-Type": "application/json" }),
+    })
+      .then(json => dispatch(deleteChoreSuccess(id))); // TODO: error handling
   }
 }

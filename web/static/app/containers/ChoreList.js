@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import ChoreListComponent from '../components/ChoreListComponent';
+import { deleteChore } from '../actions/index';
 
 const mapStateToProps = (state) => {
   return {
@@ -7,8 +8,15 @@ const mapStateToProps = (state) => {
   };
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteChore: chore => dispatch(deleteChore(chore)),
+  };
+}
+
 const ChoreList = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ChoreListComponent);
 
 export default ChoreList;

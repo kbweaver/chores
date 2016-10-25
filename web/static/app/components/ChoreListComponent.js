@@ -1,17 +1,21 @@
 import React from 'react';
 import Chore from './Chore';
 
-const ChoreListComponent = ({ chores }) =>
+const ChoreListComponent = ({ chores, deleteChore }) =>
   <ul>
   {chores.map(chore => {
     return (
-      <Chore chore={chore} key={chore.id} />
+      <Chore key={chore.id}
+             chore={chore}
+             onDelete={deleteChore}
+      />
     );
   })}
-  </ul>
+  </ul>;
 
 ChoreListComponent.propTypes = {
   chores: React.PropTypes.array.isRequired,
-}
+  deleteChore: React.PropTypes.func.isRequired,
+};
 
 export default ChoreListComponent;
