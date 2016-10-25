@@ -1,10 +1,11 @@
 import React from 'react';
+import Chore from './Chore';
 
 const ChoreListComponent = ({ chores }) =>
   <ul>
   {chores.map(chore => {
     return (
-      <li key={chore.id}>{chore.name} ({chore.id})</li>
+      <Chore chore={chore} key={chore.id} />
     );
   })}
   </ul>

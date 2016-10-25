@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ChoreListComponent from '../components/ChoreListComponent.js';
+import ChoreListComponent from '../components/ChoreListComponent';
 
 const mapStateToProps = (state) => {
   return {
