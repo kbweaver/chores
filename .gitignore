@@ -15,8 +15,9 @@ erl_crash.dump
 # variables.
 /config/prod.secret.exs
 
-# Since we are building JS with webpack, we should ignore the build output
+# Since we are building CSS and JS with webpack, we should ignore the build output
 /priv/static/js
+/priv/static/css
 
 # NPM
 /node_modules
