@@ -7,7 +7,7 @@
   "scripts": {
     "test:lint": "eslint --env browser \"web/static/app/**/!(*.test).js\"",
     "test:lintunit": "eslint --env mocha \"web/static/app/**/*.test.js\"",
-    "test:unit": "mocha --compilers js:babel-core/register web/static/app/**/*.test.js",
+    "test:unit": "mocha-webpack --webpack-config webpack.config-test.babel.js \"web/static/app/**/*.test.js\"",
     "test": "npm run test:unit && npm run test:lint && npm run test:lintunit"
   },
   "author": "Joshua Ochakovsky",
@@ -34,6 +34,8 @@
     "eslint": "^3.8.0",
     "eslint-plugin-react": "^6.4.1",
     "mocha": "^3.1.2",
-    "react-addons-test-utils": "^15.3.2"
+    "mocha-webpack": "^0.7.0",
+    "react-addons-test-utils": "^15.3.2",
+    "webpack-node-externals": "^1.5.4"
   }
 }

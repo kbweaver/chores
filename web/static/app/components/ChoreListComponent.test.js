@@ -9,9 +9,10 @@ describe('<ChoreListComponent />', () => {
     const chores = [
       {
         name: 'foo',
+        id: 1,
       },
     ];
-    const wrapper = shallow(<ChoreListComponent chores={chores}/>);
+    const wrapper = shallow(<ChoreListComponent chores={chores} deleteChore={() => {}}/>);
     expect(wrapper.find('Chore')).to.have.length(chores.length);
   });
 });
