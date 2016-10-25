@@ -22,3 +22,6 @@ erl_crash.dump
 # NPM
 /node_modules
 /npm-debug.log
+
+# mocha-webpack
+/.tmp

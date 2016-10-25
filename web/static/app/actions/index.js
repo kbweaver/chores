@@ -62,6 +62,6 @@ export function deleteChore(id) {
       method: 'DELETE',
       headers: new Headers({ "Content-Type": "application/json" }),
     })
-      .then(json => dispatch(deleteChoreSuccess(id))); // TODO: error handling
+      .then(() => dispatch(deleteChoreSuccess(id))); // TODO: error handling
   }
 }
