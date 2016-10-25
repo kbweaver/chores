@@ -1,6 +1,6 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+import ExtractTextPlugin from "extract-text-webpack-plugin";
 
-module.exports = {
+export default {
   devtool: 'source-map',
   entry: "./web/static/app/index.js",
   module: {
