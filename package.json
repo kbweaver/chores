@@ -12,6 +12,9 @@
   },
   "author": "Joshua Ochakovsky",
   "license": "GPL-3.0",
+  "engines" : {
+    "node" : "7.0.0"
+  },
   "dependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
